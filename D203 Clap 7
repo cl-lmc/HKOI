@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int c;
+  cin >> c;
+  for(int i=1; i <= 100; i++){
+    if((i%c)==0){
+      cout << "Clap";
+      cout << " ";
+    }
+    else if((i%10)==c){
+      cout << "Clap";
+      cout << " ";
+    }
+    else if((i/10)==c){
+      cout << "Clap";
+      cout << " ";      
+    }
+    else{
+      cout << i;
+      cout << " ";
+    }
+    if((i%10)==0){
+      cout <<endl;
+    }
+  }
+}
