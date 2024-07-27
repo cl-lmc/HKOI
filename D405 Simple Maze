@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+int h,w;
+char maze[21][21];
+bool visit[21][21];
+
+bool valid(int row,int col){
+  return row<h && row >=0 && col<w && col >=0 && maze[row][col]=='.';
+}
+
+bool dfs(int row,int col,string &path){
+  visit[row][col]=true;
+  if(row==h-1&& col==w-1){
+    return true;
+  }
+  if(valid(row+1,col)&&!visit[row+1][col]){
+    path.push_back('S');
+    if(dfs(row+1,col,path)){
+      return true;
+    }
+    path.pop_back();
+  }
+  if(valid(row,col+1)&& !visit[row][col+1]){
+    path.push_back('E');
+    if(dfs(row,col+1,path)){
+      return true;
+    }
+    path.pop_back();
+  }
+  return false;
+}
+
+int main() {
+  cin >> h >> w;
+  string path;
+  for(int i=0; i<h; i++){
+    for(int j=0; j<w; j++){
+      cin >> maze[i][j];
+    }
+  }
+  dfs(0,0,path);
+  cout << path;
+  return 0;
+}
