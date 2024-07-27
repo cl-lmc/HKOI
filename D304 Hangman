@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  string a,b,y;
+  int x,c=0;
+  getline(cin,a);
+  x= a.length();
+  b.resize(x);
+  for(int i=0; i <= (x-1); i++){
+    b[i]='_';
+  }
+  for(int j=0; j <= 10000; j++){
+    cin >> y[0];
+    for(int ii=0; ii <= x-1; ii++){
+      if(y[0]==a[ii]){
+        b[ii]=y[0];
+        c=c+1;
+      }
+    }
+    cout << b <<endl;
+    if(c==x){
+      break;
+    }
+  }
+}
