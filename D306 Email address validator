@@ -1,0 +1,63 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  string a;
+  cin >> a;
+  int x=a.length(),b=0,z,g=-1;
+  bool username=false;
+  bool host=false;
+  bool udon=false;
+  for(int i=0; i<x; i++){
+    if((a[i]>='0'&&a[i]<='9')||(a[i]>='A' && a[i]<='Z')||(a[i]>='a' && a[i]<='z')||(a[i]=='+')||(a[i]=='.')){
+      username=true;
+      g++;
+    }
+    if((a[0]=='.')||(a[i]=='.' && a[i+1] =='@')||(a[i]=='.' && a[i-1]=='.')){
+      cout << "Invalid";
+      return 0;
+    }
+    z=i;
+    if(a[i+1]=='@'){
+      break;
+    }
+    if(g!=i){
+      cout << "Invalid";
+      return 0;
+    }
+  }
+  g++;
+  for(int i=z+2; i<x; i++){
+    if(a[i]=='@'){
+      cout << "Invalid";
+      return 0;
+    }
+    if((a[i]>='0'&&a[i]<='9')||(a[i]>='A' && a[i]<='Z')||(a[i]>='a' && a[i]<='z')||(a[i]=='-')||(a[i]=='.')){
+      b++,g++;
+      if(b>=3){
+        host=true;
+      }
+    }
+    if((a[z+2]=='.')||(a[x-1]=='.')||(a[i]=='.' && a[i-1]=='.')){
+       cout << "Invalid";
+      return 0;
+    }
+    if((a[i]=='-' && a[i-1] == '.')||(a[i]=='-' && a[i+1] == '.')){
+      cout << "Invalid";
+      return 0;
+    }
+    if(a[i]=='.'){
+      udon=true;
+    }
+    if(g != i){
+      cout << "Invalid";
+      return 0;
+    }
+  }
+  if(username && host && udon){
+    cout << "Valid";
+  }
+  else{
+    cout << "Invalid";
+  }
+  return 0;
+}
