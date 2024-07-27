@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+#include <queue>
+using namespace std;
+int main() {
+  queue<int>x;
+  int a, temp;
+  string cmd;
+  cin >> a;
+  for(int i=0; i<a; i++){
+    cin >> cmd;
+    if(cmd == "PUSH"){
+      cin >> temp;
+      x.push(temp);
+    }
+    else if (cmd == "SIZE"){
+      cout << x.size() << endl;
+    }
+    else if (cmd == "FRONT"){
+      if(x.size()!=0){
+        cout << x.front() <<endl;
+      }
+      else{
+        cout << "Empty" << endl;
+      }
+    }
+    else if (cmd == "POP"){
+      if(x.size() !=0){
+        x.pop();
+      }
+      else{
+        cout << "Cannot pop" <<endl;
+      }
+    }
+  }
+  return 0;
+}
