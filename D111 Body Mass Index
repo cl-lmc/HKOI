@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  double w,h;
+  cin >> w >> h;
+  double b = (w/(h*h));
+  cout << fixed << setprecision(3) << b <<endl;
+  if(b<18.5){
+    cout << "Underweight";
+  }
+  else if( b>= 18.5 && b < 23){
+    cout << "Normal";
+  }
+  else if(b >= 23 && b < 25){
+    cout << "Overweight";
+  }
+  else if(b>=25){
+    cout << "Obese";
+  }
+}
