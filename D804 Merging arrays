@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int a,b;
+  cin >> a >> b;
+  int z[a+b];
+  for(int i=0; i<(a+b); i++){
+    cin >> z[i];
+  }
+  sort(z,z+(a+b));
+  for(int ii=0; ii<(a+b); ii++){
+    cout << z[ii] << " ";
+  }
+}
