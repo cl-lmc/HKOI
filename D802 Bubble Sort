@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int a,b,c=0;
+  cin >> a >>b;
+  int arr[a];
+  for(int i=0; i<a; i++){
+    cin >> arr[i];
+  }
+  for(int j=1; j<=a-1; j++){
+    for(int jj=0; jj<(a-1); jj++){
+      if(b==0 && arr[jj] > arr[jj+1]){
+        swap(arr[jj],arr[jj+1]);
+         c=c+1;
+      }
+      if(b==1 && arr[jj] < arr[jj+1]){
+       swap(arr[jj],arr[jj+1]);
+        c=c+1;
+      }
+    }
+  }
+  cout << c <<endl;
+  for(int i=0; i<a; i++){
+    cout << arr[i] << " ";
+  }
+}
