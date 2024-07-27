@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int b,d,x,y;
+  char a, c;
+  cin >> a >> b >> c >> d;
+  x=abs((int)a-(int)c);
+  y=abs(b-d);
+  if(x>y){
+   cout << x;    
+  }
+  else{
+    cout << y;
+  }  
+}
