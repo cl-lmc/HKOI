@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int a,c=0;
+  long long x,y;
+  cin >> a >> x >>y;
+  for(int i=1; i <=a-1; i++){
+    if(y <= x || x <= 100 || y >= 50000){
+      cout << "Invalid";
+      c = c+1;
+      break;
+    }
+  x=y;
+  cin >>y;
+  }
+  if(a==1 && (x<=100 || x>=50000)){
+  cout << "Invalid";
+  }
+  else if(c==0){
+    cout << "Valid";
+  }  
+}
