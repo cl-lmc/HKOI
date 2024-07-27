@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  char arr[10];
+  int c=0;
+  for(int i=1; i <= 9; i++){
+    cin >> arr[i];
+    if(arr[i]=='.'){
+      c=c+1;
+    }
+  }
+  if(arr[1] == arr[2] && arr[2] == arr[3] && arr[3] == 'O' || arr[4] == arr[5] && arr[5] == arr[6] && arr[6] == 'O' || arr[7] == arr[8] && arr[8] == arr[9] && arr[9] == 'O'){
+    cout << "O wins";
+  }
+  else if(arr[1] == arr[2] && arr[2] == arr[3] && arr[3] == 'X' || arr[4] == arr[5] && arr[5] == arr[6] && arr[6] == 'X' || arr[7] == arr[8] && arr[8] == arr[9] && arr[9] == 'X'){
+    cout << "X wins";
+  }
+  else if(arr[1] == arr[4] && arr[4] == arr[7] && arr[7] == 'O' || arr[2] == arr[5] && arr[5] == arr[8] && arr[8] == 'O' || arr[3] == arr[6] && arr[6] == arr[9] && arr[9] == 'O'){
+    cout << "O wins";
+  }
+  else if(arr[1] == arr[4] && arr[4] == arr[7] && arr[7] == 'X' || arr[2] == arr[5] && arr[5] == arr[8] && arr[8] == 'X' || arr[3] == arr[6] && arr[6] == arr[9] && arr[9] == 'X'){
+    cout << "X wins";
+  }
+  else if(arr[1] == arr[5] && arr[5] == arr[9] && arr[9] == 'O' || arr[3] == arr[5] && arr[5] == arr[7] && arr[7] == 'O'){
+    cout << "O wins";
+  }
+  else if(arr[1] == arr[5] && arr[5] == arr[9] && arr[9] == 'X' || arr[3] == arr[5] && arr[5] == arr[7] && arr[7] == 'X'){
+    cout << "X wins";
+  }
+  else if(c >= 1){
+    cout << "Not ended";
+  }
+  else if(c==0){
+    cout << "Draw";
+  }
+}
