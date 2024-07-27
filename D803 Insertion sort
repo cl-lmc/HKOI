@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int a;
+  cin >> a;
+  int c[a],x[a];
+  for(int i=0; i<a; i++){
+    cin >> c[i];
+  }
+  for(int j=0; j<a; j++){
+    x[j]=c[j];
+    sort(x,x+j+1);
+    for(int jj=0; jj<=j; jj++){
+      cout << x[jj] << " ";
+    }
+    cout <<endl;
+  }
+}
