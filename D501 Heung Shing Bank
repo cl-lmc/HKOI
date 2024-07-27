@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  freopen("account.txt","r",stdin);
+  int a,x,y=0;
+  cin >> a;
+  for(int i=1; i<=a; i++){
+    cin >>x;
+    y=y+x;
+  }
+  cout << y;
+}
