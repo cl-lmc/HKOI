@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int a,w=0,h=0;
+  cin >> a;
+  int x[a], y[a];
+  for(int i=0; i<a; i++){
+    cin >> x[i] >> y[i];
+  }
+  x[a]=x[0], y[a]=y[0];
+  for(int i=0; i<a; i++){
+    w=w+x[i]*y[i+1];
+    h=h+y[i]*x[i+1];
+  }
+  float z = (float) abs(w-h)/2;
+  cout << fixed << setprecision(1) << z;
+}
