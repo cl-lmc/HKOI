@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int a;
+  cin >> a;
+  double matrix[a+1][a+1];
+  for(int i=1; i<=a; i++){
+    for(int j=1; j<=a; j++){
+      cin >> matrix[i][j];
+    }
+  }
+  int b,x,y;
+  char z;
+  cin >> b;
+  for(int i=0; i<b; i++){
+    cin >> x >> y >> z;
+    if( z =='A'){
+      if(x<y){
+        cout << fixed << setprecision(1) << matrix[x][y] <<endl;
+      }
+      else{
+        cout << fixed << setprecision(1) << matrix[y][x] << endl;
+      }
+    }
+    else if (z=='C'){
+      if(x<y){
+        cout << fixed << setprecision(1) << matrix[y][x]<< endl;
+      }
+      else{
+        cout << fixed << setprecision(1) << matrix[x][y] <<endl;
+      }
+    }
+  }  
+  return 0;
+}
