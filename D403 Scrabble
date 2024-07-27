@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  string a,b,g;
+  getline(cin,g);
+  int x=g.length(),y,c,z;
+  cin >> c;
+  cin.ignore();
+  for(int i=1; i<=c; i++){
+    a=g;
+    getline(cin,b);
+    y=b.length();
+    z=0;
+    for(int j=0; j<y; j++){
+      for(int ii=0; ii<x; ii++){
+        if(b[j] == a[ii]){
+          a[ii]=0;
+          z=z+1;
+          break;
+        }
+      }
+    }
+    if(z==y){
+      cout << "Yes"<<endl;
+    }
+    else if (z!=y){
+      cout << "No"<<endl;
+    }
+  }
+}
