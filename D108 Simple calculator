@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int n1, n2 ,n3, x, y,t;
+  char m1, m2;
+  cin >> n1 >> m1 >> n2 >> m2 >> n3;
+  if( (m2 != '*') or ((m2 == '*') && (m1 == '*'))){
+  if(m1 == '+'){
+    x= n1 + n2;
+  }
+  else if(m1 == '-'){
+    x = n1 - n2;
+  }
+  else if (m1 == '*'){
+    x = n1*n2;
+  }
+  if(m2 == '+'){
+    y= x+n3;
+  }
+  else if(m2 == '-'){
+    y=x-n3;
+  }
+  else if (m2 == '*'){
+    y=x*n3;
+  }
+  }
+  if(m2 == '*' && m1 != '*'){
+   x = n2 * n3;
+    if(m1 == '+'){
+    y= n1 + x;
+  }
+  else if(m1 == '-'){
+    y = n1 - x;
+  }
+  else if (m1 == '*'){
+    y = n1*x;
+  }
+    }
+  cout << y;
+}
