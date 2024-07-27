@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int a,b,z;
+  cin >> a >>b;
+  int x[a], y[b];
+  for(int i=0; i<a; i++){
+    cin >> x[i];
+  }
+  for(int j=0; j<b; j++){
+    cin >> y[j];
+  }
+  z=(a-1)/2;
+  for(int ii=0; ii < b; ii++){
+    bool exist=false;
+    if(y[ii] >= x[z]){
+    for(int jj=z; jj<a; jj++){
+      if(y[ii] == x[jj]){
+        exist=true;
+        break;
+      }
+    }
+  }
+    if(y[ii] < x[z]){
+    for(int jj=0; jj<z; jj++){
+      if(y[ii] == x[jj]){
+        exist=true;
+        break;
+      }
+    }
+  }
+  if(exist){
+    cout << "Yes" <<endl;
+  }
+  else{
+    cout << "No" <<endl;
+  }
+  }
+}
