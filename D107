@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int t,f=0;
+  long long a;
+  cin >> a;
+  long long x = round(sqrt(a));
+  long double w = ((-1+sqrt(1+8*a))/2);
+  long double  h = ((-1-sqrt(1+8*a))/2);
+  if (floor(w) == w){
+    f = f+1;
+  }
+  else if(floor(h) == h){
+    f = f+1;
+  }
+  if( x*x == a){
+    f= f + 2;
+    }
+  if(f==0){
+    cout << "Neither";
+  }
+  else if(f==1){
+  cout << "Triangular"; 
+  }
+  else if(f==2){
+    cout << "Square";
+  }
+  else if(f==3){
+    cout << "Both";
+  }
+}
