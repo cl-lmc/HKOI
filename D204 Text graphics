@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int a,c=1;
+  cin >> a;
+  int d=a-5+1;
+  if(a>1){
+  for(int ii=1; ii <=floor(a/2); ii++){
+    cout << " ";
+  }
+  cout << "#" <<endl;
+  
+  for(int j=floor(a/2)-1; j >= 0; j--){
+    for(int i=j; i >= 1; i--){
+      cout << " ";
+    }
+  cout << "#";
+  for(int jj=1; jj <= c; jj++){
+    cout << " ";
+  }
+  c=c+2;
+  cout << "#" <<endl;
+  }
+
+  for(int jjj=1; jjj <= floor(a/2)-1; jjj++){
+    for(int i=1; i <= jjj; i++){
+      cout << " ";
+    }
+  cout << "#";
+  for(int iii=d; iii >= 1; iii--){
+    cout << " ";
+  }
+  d=d-2;
+  cout << "#" <<endl;
+  }
+  
+  for(int ii=1; ii <=floor(a/2); ii++){
+    cout << " ";
+  }
+  cout << "#" <<endl;
+  }
+  else{
+  cout << "#";
+  }
+}
