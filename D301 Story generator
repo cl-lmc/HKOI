@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  string a,b,c,d,e;
+  getline (cin, a);
+  getline (cin, b);
+  getline (cin, c);
+  getline (cin, d);
+  getline (cin, e);
+  cout << "My name is " << a <<endl;
+  cout << "My friend is " << b <<endl;
+  cout << "He likes eating " << c <<" when on the " << d <<endl;
+  cout << "We are all sleeping in " <<e;
+}
