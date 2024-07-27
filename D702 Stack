@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+#include <stack>
+using namespace std;
+int main() {
+  stack<int>x;
+  int a,temp;
+  string cmd;
+  cin >> a;
+  for(int i=0; i<a; i++){
+    cin >> cmd;
+    if(cmd == "PUSH"){
+      cin >> temp;
+      x.push(temp);
+    }
+    else if(cmd == "TOP"){
+      if(x.size() != 0){
+      cout << x.top() << endl;
+      }
+      else{
+        cout << "Empty" << endl;
+      }
+    }
+    else if(cmd == "SIZE"){
+      cout << x.size() <<endl;
+    }
+    else if(cmd == "POP"){
+      if(!x.empty()){
+        x.pop();
+      }
+      else{
+        cout << "Cannot pop" << endl;
+      }
+    }
+  }
+  return 0;
+}
