@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int a,b;
+  long long x[100],z;
+  double y[100], m=0;
+  cin >> a;
+  for(int i=0; i < a; i++){
+    cin >> x[i] >> y[i];
+  }
+  cin >> b;
+  for(int ii=0; ii < b; ii++){
+    cin >> z;
+    for(int j=0; j < a; j++){
+      if(z == x[j]){
+        m= m+ y[j];
+        break;
+      }
+    }
+  }
+  cout << fixed << setprecision(1) << m;
+}
